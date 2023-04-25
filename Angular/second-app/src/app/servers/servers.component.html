@@ -1,16 +1,12 @@
-<app-server></app-server>
-<app-server></app-server>
-<hr>
+
+<hr />
 <label for="">Server Name</label>
 <!-- <input
   type="text"
   class="form-control"
   (input)="onUpdateServerName($event)"
 /> -->
-<input
-type ="text"
-class ="form-control"
-[(ngModel)] ="serverName"/>
+<input type="text" class="form-control" [(ngModel)]="serverName" />
 <!-- <p>{{ serverName }}</p> -->
 <button
   class="btn btn-primary"
@@ -19,18 +15,16 @@ class ="form-control"
 >
   Add Server
 </button>
-<p *ngIf="serverCreated; else noServer">Server was created, sever name is {{ serverName }}</p>
-<ng-template #noServer>
-<p> No server was created </p>
-</ng-template>
-
-<hr>
+<p *ngIf="serverCreated">Server was created, sever name is {{ serverName }}</p>
+<!-- ; else noServer -->
+<!-- <ng-template #noServer>
+  <p>No server was created</p>
+</ng-template> -->
+<app-server *ngFor="let serverxd of servers"></app-server>
+<hr />
 
 <label for="">User Name</label>
-<input
-type ="text"
-class ="form-control"
-[(ngModel)] ="userName"/>
+<input type="text" class="form-control" [(ngModel)]="userName" />
 <p>{{ userName }}</p>
 
 <button
@@ -40,6 +34,4 @@ class ="form-control"
 >
   New person
 </button>
-<hr>
-
-
+<hr />
