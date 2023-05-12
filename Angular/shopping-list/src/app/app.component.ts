@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loaded: string = 'recipe';
+  onNavigate(where: string){
+    this.loaded = where;
+  }
+
 }
